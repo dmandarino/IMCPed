@@ -89,8 +89,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowIMCSegue"
         {
-            if let destinationVC = segue.destinationViewController as? ResultViewController{
-                destinationVC.result = imc
+            if let destinationVC = segue.destinationViewController as? ChartViewController{
+                destinationVC.IMC = imc
                 destinationVC.age = NSString(string: age.text!).floatValue
                 destinationVC.isBoy = isBoy
             }

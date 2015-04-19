@@ -132,7 +132,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="calculate:" destination="SXI-0k-ifK" eventType="touchUpInside" id="h8n-3C-myf"/>
-                                    <segue destination="Fdo-9p-KWq" kind="show" identifier="ShowIMCSegue" id="56m-ts-wyg"/>
+                                    <segue destination="J1n-xr-Y4r" kind="show" identifier="ShowIMCSegue" id="0FU-Xd-5sR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="É um menino!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSz-Zd-PQH">
@@ -193,70 +193,59 @@
             </objects>
             <point key="canvasLocation" x="1242" y="-449"/>
         </scene>
-        <!--Result View Controller-->
-        <scene sceneID="wn5-oa-epx">
+        <!--Chart View Controller-->
+        <scene sceneID="FqW-aq-qSI">
             <objects>
-                <viewController id="Fdo-9p-KWq" customClass="ResultViewController" customModule="IMCPed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J1n-xr-Y4r" customClass="ChartViewController" customModule="IMCPed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QAY-yS-kHc"/>
-                        <viewControllerLayoutGuide type="bottom" id="740-hZ-jop"/>
+                        <viewControllerLayoutGuide type="top" id="jvF-89-ngq"/>
+                        <viewControllerLayoutGuide type="bottom" id="YTb-Uy-aeI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Hr-jI-lUw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="iVA-Pl-Fxp">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-GZ-WFr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMC dentro dos padrões" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaQ-5J-rJx">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="87" width="146" height="69"/>
+                                    <rect key="frame" x="53" y="397" width="215" height="96"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqi-AV-wle">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSf-Fc-daC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="164" width="138" height="86"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medida nos Padrões" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpX-TI-WJh">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="302" width="254" height="177"/>
+                                    <rect key="frame" x="78" y="331" width="164" height="76"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="JZC-GZ-WFr"/>
-                                <exclude reference="Kqi-AV-wle"/>
-                                <exclude reference="bpX-TI-WJh"/>
+                                <exclude reference="WaQ-5J-rJx"/>
+                                <exclude reference="cSf-Fc-daC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="JZC-GZ-WFr"/>
-                                <include reference="Kqi-AV-wle"/>
-                                <include reference="bpX-TI-WJh"/>
+                                <include reference="WaQ-5J-rJx"/>
+                                <include reference="cSf-Fc-daC"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="messageLabel" destination="bpX-TI-WJh" id="jFg-vQ-5jt"/>
-                        <outlet property="resultLabel" destination="Kqi-AV-wle" id="vQg-pD-jzD"/>
+                        <outlet property="messageLabel" destination="WaQ-5J-rJx" id="uob-EM-6GB"/>
+                        <outlet property="resultLabel" destination="cSf-Fc-daC" id="tjr-7V-Mc5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kME-C5-pcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BB7-Hb-9hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041.5" y="-449"/>
+            <point key="canvasLocation" x="1842" y="-449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I1q-eA-jf9">
