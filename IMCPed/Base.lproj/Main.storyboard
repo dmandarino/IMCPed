@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6KR-jk-7uz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ngt-Xp-YCF">
+            <objects>
+                <navigationController id="fY1-pi-3eo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Scales-32.png" id="WHS-nD-xqu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ls5-gr-5U3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SXI-0k-ifK" kind="relationship" relationship="rootViewController" id="bJ8-ba-FUi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHh-Cx-0mw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.5" y="-440"/>
+        </scene>
+        <!--IMC-->
+        <scene sceneID="E43-sr-X4u">
+            <objects>
+                <viewController id="SXI-0k-ifK" customClass="ViewController" customModule="IMCPed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNw-cd-UDH"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTl-FK-1bE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N8f-So-l8g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ruleM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-ke-83b">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="215" width="12" height="61"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUA-oL-Tr2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="baby-boy-icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="128" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="boyButton:" destination="SXI-0k-ifK" eventType="touchUpInside" id="ATG-8N-FEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNa-MS-hsF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="baby-girl-icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="128" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="girlButton:" destination="SXI-0k-ifK" eventType="touchUpInside" id="B7U-6B-Xny"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agx-jO-pJG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="282" y="235" width="24" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXE-7I-OXa">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="292" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6m-Pc-mLC">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="231" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanca-equilibrio-ponderacao.png" translatesAutoresizingMaskIntoConstraints="NO" id="Us5-vA-RL1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="288" width="45" height="37"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-xZ-OE9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="283" y="296" width="22" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa2-cK-75g">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="354" width="39" height="25"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mj9-26-nFc">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="354" width="118" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="setKidAge:" destination="SXI-0k-ifK" eventType="valueChanged" id="6SF-gZ-nQQ"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9M-gX-vdt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="425" width="92" height="86"/>
+                                </variation>
+                                <connections>
+                                    <action selector="calculate:" destination="SXI-0k-ifK" eventType="touchUpInside" id="h8n-3C-myf"/>
+                                    <segue destination="Fdo-9p-KWq" kind="show" identifier="ShowIMCSegue" id="56m-ts-wyg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="É um menino!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSz-Zd-PQH">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.070588235289999995" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="83" width="134" height="37"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.97341695271040263" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bfe-ke-83b"/>
+                                <exclude reference="gUA-oL-Tr2"/>
+                                <exclude reference="YNa-MS-hsF"/>
+                                <exclude reference="agx-jO-pJG"/>
+                                <exclude reference="BXE-7I-OXa"/>
+                                <exclude reference="Y6m-Pc-mLC"/>
+                                <exclude reference="Us5-vA-RL1"/>
+                                <exclude reference="BMe-xZ-OE9"/>
+                                <exclude reference="xa2-cK-75g"/>
+                                <exclude reference="Mj9-26-nFc"/>
+                                <exclude reference="z9M-gX-vdt"/>
+                                <exclude reference="RSz-Zd-PQH"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Bfe-ke-83b"/>
+                                <include reference="gUA-oL-Tr2"/>
+                                <include reference="YNa-MS-hsF"/>
+                                <include reference="agx-jO-pJG"/>
+                                <include reference="BXE-7I-OXa"/>
+                                <include reference="Y6m-Pc-mLC"/>
+                                <include reference="Us5-vA-RL1"/>
+                                <include reference="BMe-xZ-OE9"/>
+                                <include reference="xa2-cK-75g"/>
+                                <include reference="Mj9-26-nFc"/>
+                                <include reference="z9M-gX-vdt"/>
+                                <include reference="RSz-Zd-PQH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="IMC" id="r0X-Nd-8w6"/>
+                    <connections>
+                        <outlet property="age" destination="xa2-cK-75g" id="7cn-WT-32s"/>
+                        <outlet property="height" destination="Y6m-Pc-mLC" id="cM1-HK-wfR"/>
+                        <outlet property="ruleImage" destination="Bfe-ke-83b" id="4ma-o1-AOE"/>
+                        <outlet property="slider" destination="Mj9-26-nFc" id="dgI-iu-2R3"/>
+                        <outlet property="titlePage" destination="RSz-Zd-PQH" id="6dn-50-4kM"/>
+                        <outlet property="weight" destination="BXE-7I-OXa" id="Orj-nk-8yp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dX3-uV-Q1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="-449"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="wn5-oa-epx">
+            <objects>
+                <viewController id="Fdo-9p-KWq" customClass="ResultViewController" customModule="IMCPed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QAY-yS-kHc"/>
+                        <viewControllerLayoutGuide type="bottom" id="740-hZ-jop"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Hr-jI-lUw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-GZ-WFr">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="87" width="146" height="69"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqi-AV-wle">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="164" width="138" height="86"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medida nos Padrões" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpX-TI-WJh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="302" width="254" height="177"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JZC-GZ-WFr"/>
+                                <exclude reference="Kqi-AV-wle"/>
+                                <exclude reference="bpX-TI-WJh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JZC-GZ-WFr"/>
+                                <include reference="Kqi-AV-wle"/>
+                                <include reference="bpX-TI-WJh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="bpX-TI-WJh" id="jFg-vQ-5jt"/>
+                        <outlet property="resultLabel" destination="Kqi-AV-wle" id="vQg-pD-jzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kME-C5-pcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041.5" y="-449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I1q-eA-jf9">
+            <objects>
+                <navigationController id="raw-LM-tin" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Info-32.png" id="A8D-ZM-eId"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uzx-xf-7pf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nYk-fQ-ZN8" kind="relationship" relationship="rootViewController" id="WfR-vQ-MNd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWT-5Y-Kcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="397"/>
+        </scene>
+        <!--Informações-->
+        <scene sceneID="mu1-dT-7Pp">
+            <objects>
+                <viewController id="nYk-fQ-ZN8" customClass="InfoViewController" customModule="IMCPed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bSH-ez-gkN"/>
+                        <viewControllerLayoutGuide type="bottom" id="JUG-Oc-Bt5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gIL-iQ-FEG" customClass="Info">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Informações" id="jHO-6c-3Je"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPF-we-mYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="397"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5gl-Pz-6og">
+            <objects>
+                <tabBarController id="6KR-jk-7uz" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="uLN-vI-TRc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fY1-pi-3eo" kind="relationship" relationship="viewControllers" id="Kvv-sx-7JB"/>
+                        <segue destination="raw-LM-tin" kind="relationship" relationship="viewControllers" id="J7K-lG-ImD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfw-cZ-oAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="-105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png" width="256" height="256"/>
+        <image name="Info-32.png" width="32" height="32"/>
+        <image name="Scales-32.png" width="32" height="32"/>
+        <image name="baby-boy-icon.png" width="64" height="64"/>
+        <image name="baby-girl-icon.png" width="64" height="64"/>
+        <image name="balanca-equilibrio-ponderacao.png" width="256" height="208"/>
+        <image name="ruleM.png" width="81" height="604"/>
+    </resources>
+</document>
