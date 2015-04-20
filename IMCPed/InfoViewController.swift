@@ -11,16 +11,6 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-    
-    @IBOutlet weak var ruleImage: UIImageView!
-    @IBOutlet weak var age: UILabel!
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var height: UITextField!
-    @IBOutlet weak var weight: UITextField!
-    
-    let blueColor = UIColor(red: 1/255, green:176/255, blue: 240/255, alpha: 0)
-    let pinkColor = UIColor(red: 255/255, green:53/255, blue: 139/255, alpha: 0)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeBars()
@@ -35,5 +25,7 @@ class InfoViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+
     }
 }

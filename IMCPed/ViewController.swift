@@ -19,13 +19,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titlePage: UILabel!
     
     var isBoy:Bool = true
-    var imc:Float = 0.0
+    var imc:Float = 00.00
 
     let blueColor = UIColor(red: 1/255, green:176/255, blue: 240/255, alpha: 0)
     let pinkColor = UIColor(red: 255/255, green:53/255, blue: 139/255, alpha: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
         
         height.delegate = self
         weight.delegate = self
@@ -67,13 +68,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func setKidAge(sender: AnyObject) {
         let sliderInt = Int(slider.value)
-        var result:Float = Float(sliderInt)
-        
-        if (slider.value - result) >= 0.5 {
-           result += 0.5
-        }
-        
-        age.text = "\(result)"
+//        var result:Float = Float(sliderInt)
+//        
+//        if (slider.value - result) >= 0.5 {
+//           result += 1
+//        }
+//        
+//        age.text = "\(result)"
+        age.text = "\(sliderInt)"
     }
     
     @IBAction func calculate(sender: AnyObject) {
@@ -82,17 +84,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
             var w:Float = (weight.text as NSString).floatValue
                         
             imc = w/(pow(h, 2))
-            println(imc)
         }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowIMCSegue"
-        {
+        if segue.identifier == "ShowIMCSegue" {
             if let destinationVC = segue.destinationViewController as? ChartViewController{
                 destinationVC.IMC = imc
-                destinationVC.age = NSString(string: age.text!).floatValue
+                destinationVC.age = NSString(string: age.text!).integerValue
                 destinationVC.isBoy = isBoy
+                destinationVC.height = (height.text as NSString).floatValue/100
             }
         }
     }

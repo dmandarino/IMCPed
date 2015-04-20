@@ -7,25 +7,41 @@ class ChartViewController: UIViewController, LineChartDelegate {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imcLabel: UILabel!
     
-    var label = UILabel()
+//    var label = UILabel()
     var lineChart: LineChart!
     
     var IMC:Float!
-    var age:Float!
+    var age:Int!
     var isBoy:Bool!
+    var height:Float!
     
     let iMCValues = IMCValues()
     let nf = NSNumberFormatter()
-        
+    
+    var list = [Value]()
+    var l2 = [Value]()
+    var sList = [CGFloat]()
+    var ovList = [CGFloat]()
+    var obList = [CGFloat]()
+    var ageList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+
+        label.font = UIFont(name: "Noteworthy-Light", size: 22)
+        resultLabel.font = UIFont(name: "Noteworthy-Light", size: 22)
+        messageLabel.font = UIFont(name: "Noteworthy-Light", size: 22)
+        imcLabel.font = UIFont(name: "Noteworthy-Light", size: 22)
+
         nf.numberStyle = NSNumberFormatterStyle.DecimalStyle
         nf.maximumFractionDigits = 2
         
-        println(nf.stringFromNumber(IMC))
         resultLabel.text = "\(nf.stringFromNumber(IMC)!)"
         
         IMC = NSString(string: nf.stringFromNumber(IMC)!).floatValue
@@ -34,20 +50,38 @@ class ChartViewController: UIViewController, LineChartDelegate {
         
         var views: [String: AnyObject] = [:]
         
-        label.text = "..."
         label.setTranslatesAutoresizingMaskIntoConstraints(false)
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
         views["label"] = label
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[label]-|", options: nil, metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-80-[label]", options: nil, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[label]", options: nil, metrics: nil, views: views))
         
         // simple arrays
-        var data: [CGFloat] = [3, 4, -2, 11, 13, 15, 12, 5, 20, 23]
-        var data2: [CGFloat] = [1, 3, 5, 13, 17, 36]
+        if isBoy == true {
+            list = iMCValues.getBoyList()
+        } else {
+            list = iMCValues.getGirlList()
+        }
+        
+        for (var i = 0 ; i < list.count/2 ; i+=2) {
+            l2.append(list[i])
+        }
+        
+        for l in l2 {
+            sList.append(CGFloat(l.standard))
+            ovList.append(CGFloat(l.overweight))
+            obList.append(CGFloat(l.obese))
+            ageList.append(Int(l.age).description)
+        }
+        
+        var data = sList
+        var data2 = ovList
+        var data3 = obList
         
         // simple line with custom x axis labels
-        var xLabels: [String] = ["6", "7", "8", "9", "10", "11", "12", "12", "12", "12"]
+//        var xLabels = ageList
+        var xLabels = ["6", "8", "10", "12", "14"]
         
         lineChart = LineChart()
         lineChart.animation.enabled = true
@@ -59,6 +93,7 @@ class ChartViewController: UIViewController, LineChartDelegate {
         lineChart.y.labels.visible = true
         lineChart.addLine(data)
         lineChart.addLine(data2)
+        lineChart.addLine(data3)
         
         lineChart.setTranslatesAutoresizingMaskIntoConstraints(false)
         lineChart.delegate = self
@@ -78,12 +113,20 @@ class ChartViewController: UIViewController, LineChartDelegate {
         }
         for v in values {
             if v.age == self.age {
+                
+                var max = v.overweight * pow(height, 2)
+                let num = NSNumberFormatter()
+                num.numberStyle = NSNumberFormatterStyle.DecimalStyle
+                num.maximumFractionDigits = 2
+                
+                max = NSString(string: nf.stringFromNumber(max)!).floatValue
+                
                 if IMC > v.overweight {
-                    messageLabel.text = "Acima do Peso.\nIMC ideal = \(v.standard)"
+                    messageLabel.text = "Acima do Peso\nIMC ideal = \(v.standard)\nPeso ideal até = \(max) Kg"
                     messageLabel.textColor = UIColor.orangeColor  ()
                 }
                 if IMC > v.obese {
-                    messageLabel.text = "Obesidade.\nIMC ideal = \(v.standard)"
+                    messageLabel.text = "Obesidade\nIMC ideal = \(v.standard)\nPeso ideal até = \(max) Kg"
                     messageLabel.textColor = UIColor.redColor()
                 }
             }
@@ -100,18 +143,7 @@ class ChartViewController: UIViewController, LineChartDelegate {
      * Line chart delegate method.
      */
     func didSelectDataPoint(x: CGFloat, yValues: Array<CGFloat>) {
-        label.text = "x: \(x)     y: \(yValues)"
+    
     }
     
-    
-    
-    /**
-     * Redraw chart on device rotation.
-     */
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        if let chart = lineChart {
-            chart.setNeedsDisplay()
-        }
-    }
-
 }

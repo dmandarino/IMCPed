@@ -9,12 +9,12 @@
 import Foundation
 
 class Value {
-    var age:Float
+    var age:Int
     var standard:Float
     var overweight:Float
     var obese:Float
     
-    init (age:Float, standard:Float, overweight:Float, obese:Float){
+    init (age:Int, standard:Float, overweight:Float, obese:Float){
         self.age = age
         self.standard = standard
         self.obese = obese
