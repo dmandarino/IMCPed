@@ -14,6 +14,10 @@ class IMCValues {
     var girlList = [Value]()
 
     //BOY LIST!!!
+    var v2M = Value(age: 2, standard: 16.0, overweight: 17.4, obese: 18.6)
+    var v3M = Value(age: 3, standard: 15.6, overweight: 17.0, obese: 18.2)
+    var v4M = Value(age: 4, standard: 15.4, overweight: 16.8, obese: 18.0)
+    var v5M = Value(age: 5, standard: 15.2, overweight: 16.6, obese: 18.0)
     var v6M = Value(age: 6, standard: 14.5, overweight: 16.6, obese: 18.0)
     var v7M = Value(age: 7, standard: 15, overweight: 17.3, obese: 19.1)
     var v8M = Value(age: 8, standard: 15.6, overweight: 16.7, obese: 20.3)
@@ -26,6 +30,10 @@ class IMCValues {
     var v15M = Value(age: 15, standard: 19.9, overweight: 23.6, obese: 27.7)
     
     func getBoyList() ->[Value] {
+        boyList.append(v2M)
+        boyList.append(v3M)
+        boyList.append(v4M)
+        boyList.append(v5M)
         boyList.append(v6M)
         boyList.append(v7M)
         boyList.append(v8M)
@@ -41,6 +49,10 @@ class IMCValues {
     }
     
     //GIRL LIST!!!
+    var v2F = Value(age: 2, standard: 15.6, overweight: 17.2, obese: 18.6)
+    var v3F = Value(age: 3, standard: 15.4, overweight: 16.8, obese: 18.2)
+    var v4F = Value(age: 4, standard: 15.2, overweight: 16.8, obese: 18.3)
+    var v5F = Value(age: 5, standard: 15.3, overweight: 17.0, obese: 18.6)
     var v6F = Value(age: 6, standard: 14.3, overweight: 16.1, obese: 17.4)
     var v7F = Value(age: 7, standard: 14.9, overweight: 17.1, obese: 18.9)
     var v8F = Value(age: 8, standard: 15.6, overweight: 18.1, obese: 20.3)
@@ -53,6 +65,10 @@ class IMCValues {
     var v15F = Value(age: 15, standard: 19.6, overweight: 24.2, obese: 28.8)
     
     func getGirlList() ->[Value] {
+        girlList.append(v2F)
+        girlList.append(v3F)
+        girlList.append(v4F)
+        girlList.append(v5F)
         girlList.append(v6F)
         girlList.append(v7F)
         girlList.append(v8F)

@@ -54,9 +54,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(ruleImage)
     
         titlePage.text = "É um menino!"
-        titlePage.textColor = UIColor.blueColor()
-        isBoy = true
+        titlePage.textColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
 
+        isBoy = true
     }
     
     func configureDefaultSlider() {

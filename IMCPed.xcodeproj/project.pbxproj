@@ -14,6 +14,7 @@
 		5A18B0601AE37C3D008CA5D5 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18B05F1AE37C3D008CA5D5 /* Value.swift */; };
 		5A18B0661AE4573C008CA5D5 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18B0641AE4573C008CA5D5 /* LineChart.swift */; };
 		5A18B0671AE4573C008CA5D5 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18B0651AE4573C008CA5D5 /* ChartViewController.swift */; };
+		5A18B06B1AE4AD6C008CA5D5 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A18B06A1AE4AD6C008CA5D5 /* logo.jpg */; };
 		5A2ADF271AE2F90700DA2C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ADF261AE2F90700DA2C8D /* AppDelegate.swift */; };
 		5A2ADF291AE2F90700DA2C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ADF281AE2F90700DA2C8D /* ViewController.swift */; };
 		5A2ADF2C1AE2F90700DA2C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2ADF2A1AE2F90700DA2C8D /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		5A18B05F1AE37C3D008CA5D5 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		5A18B0641AE4573C008CA5D5 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		5A18B0651AE4573C008CA5D5 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		5A18B06A1AE4AD6C008CA5D5 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		5A2ADF211AE2F90700DA2C8D /* IMCPed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMCPed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2ADF251AE2F90700DA2C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2ADF261AE2F90700DA2C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				5A2ADF4B1AE2FF2D00DA2C8D /* balanca-equilibrio-ponderacao.png */,
 				5A2ADF4F1AE300AD00DA2C8D /* baby-boy-icon.png */,
 				5A13617F1AE346700008EEF1 /* Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png */,
+				5A18B06A1AE4AD6C008CA5D5 /* logo.jpg */,
 				5A2ADF461AE2FE4100DA2C8D /* ruleF.png */,
 				5A2ADF4D1AE3009C00DA2C8D /* baby-girl-icon.png */,
 				5A2ADF471AE2FE4100DA2C8D /* ruleM.png */,
@@ -229,6 +232,7 @@
 				TargetAttributes = {
 					5A2ADF201AE2F90700DA2C8D = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = N3GG8VLR9P;
 					};
 					5A2ADF351AE2F90700DA2C8D = {
 						CreatedOnToolsVersion = 6.3;
@@ -264,6 +268,7 @@
 				5A2ADF311AE2F90700DA2C8D /* LaunchScreen.xib in Resources */,
 				5A2ADF4E1AE3009C00DA2C8D /* baby-girl-icon.png in Resources */,
 				5A1361801AE346700008EEF1 /* Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png in Resources */,
+				5A18B06B1AE4AD6C008CA5D5 /* logo.jpg in Resources */,
 				5A2ADF481AE2FE4100DA2C8D /* ruleF.png in Resources */,
 				5A2ADF4C1AE2FF2D00DA2C8D /* balanca-equilibrio-ponderacao.png in Resources */,
 				5A13617E1AE31CCC0008EEF1 /* Scales-32.png in Resources */,
@@ -371,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -410,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,20 +426,26 @@
 		5A2ADF411AE2F90700DA2C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IMCPed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5A2ADF421AE2F90700DA2C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IMCPed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

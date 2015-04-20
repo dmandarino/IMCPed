@@ -64,15 +64,18 @@ class ChartViewController: UIViewController, LineChartDelegate {
             list = iMCValues.getGirlList()
         }
         
-        for (var i = 0 ; i < list.count/2 ; i+=2) {
+        for (var i = 0 ; i < list.count/2 ; i+=1) {
             l2.append(list[i])
         }
+        
+        var dataIMC = [CGFloat]()
         
         for l in l2 {
             sList.append(CGFloat(l.standard))
             ovList.append(CGFloat(l.overweight))
             obList.append(CGFloat(l.obese))
             ageList.append(Int(l.age).description)
+            dataIMC.append(CGFloat(IMC))
         }
         
         var data = sList
@@ -81,7 +84,7 @@ class ChartViewController: UIViewController, LineChartDelegate {
         
         // simple line with custom x axis labels
 //        var xLabels = ageList
-        var xLabels = ["6", "8", "10", "12", "14"]
+        var xLabels = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         
         lineChart = LineChart()
         lineChart.animation.enabled = true
@@ -94,6 +97,7 @@ class ChartViewController: UIViewController, LineChartDelegate {
         lineChart.addLine(data)
         lineChart.addLine(data2)
         lineChart.addLine(data3)
+        lineChart.addLine(dataIMC)
         
         lineChart.setTranslatesAutoresizingMaskIntoConstraints(false)
         lineChart.delegate = self
