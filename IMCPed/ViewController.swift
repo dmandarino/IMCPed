@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         titlePage.text = "É um menino!"
         titlePage.textColor = UIColor.blueColor()
         isBoy = true
+
     }
     
     func configureDefaultSlider() {

@@ -10,7 +10,6 @@
 		5A13617D1AE31CCC0008EEF1 /* Info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A13617B1AE31CCC0008EEF1 /* Info-32.png */; };
 		5A13617E1AE31CCC0008EEF1 /* Scales-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A13617C1AE31CCC0008EEF1 /* Scales-32.png */; };
 		5A1361801AE346700008EEF1 /* Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A13617F1AE346700008EEF1 /* Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png */; };
-		5A1361821AE347DA0008EEF1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1361811AE347DA0008EEF1 /* InfoViewController.swift */; };
 		5A1361861AE37B030008EEF1 /* IMCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1361851AE37B030008EEF1 /* IMCValues.swift */; };
 		5A18B0601AE37C3D008CA5D5 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18B05F1AE37C3D008CA5D5 /* Value.swift */; };
 		5A18B0661AE4573C008CA5D5 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18B0641AE4573C008CA5D5 /* LineChart.swift */; };
@@ -42,7 +41,6 @@
 		5A13617B1AE31CCC0008EEF1 /* Info-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info-32.png"; sourceTree = "<group>"; };
 		5A13617C1AE31CCC0008EEF1 /* Scales-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scales-32.png"; sourceTree = "<group>"; };
 		5A13617F1AE346700008EEF1 /* Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookkeeping-Manila-Philippines-Bookkeeping-Business-Registration-Document-Facilitation-Services.png"; sourceTree = "<group>"; };
-		5A1361811AE347DA0008EEF1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5A1361851AE37B030008EEF1 /* IMCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMCValues.swift; sourceTree = "<group>"; };
 		5A18B05F1AE37C3D008CA5D5 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		5A18B0641AE4573C008CA5D5 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				5A2ADF281AE2F90700DA2C8D /* ViewController.swift */,
-				5A1361811AE347DA0008EEF1 /* InfoViewController.swift */,
 				5A18B0651AE4573C008CA5D5 /* ChartViewController.swift */,
 			);
 			name = controller;
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2ADF291AE2F90700DA2C8D /* ViewController.swift in Sources */,
-				5A1361821AE347DA0008EEF1 /* InfoViewController.swift in Sources */,
 				5A2ADF271AE2F90700DA2C8D /* AppDelegate.swift in Sources */,
 				5A18B0601AE37C3D008CA5D5 /* Value.swift in Sources */,
 				5A18B0661AE4573C008CA5D5 /* LineChart.swift in Sources */,
