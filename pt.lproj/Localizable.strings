@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  IMCPed
+
+  Created by Douglas Mandarino on 4/30/15.
+  Copyright (c) 2015 Douglas Mandarino. All rights reserved.
+*/
+"title"="IMC";
+"boy"="É um Menino!";
+"girl"="É uma Menina!";
+"2 years"="2 anos";
+"3 years"="3 anos";
+"4 years"="4 anos";
+"5 years"="5 anos";
+"6 years"="6 anos";
+"7 years"="7 anos";
+"8 years"="8 anos";
+"9 years"="9 anos";
+"10 years"="10 anos";
+"11 years"="11 anos";
+"12 years"="12 anos";
+"13 years"="13 anos";
+"14 years"="14 anos";
+"15 years"="15 anos";
+"BMI / Years"="IMC / Anos";
+"overweight"="IMC = %@.\nPeso ideal < %@ Kg";
+"obese"="IMC = %@.\nPeso ideal < %@ Kg";
+"ideal"="IMC = %@.";

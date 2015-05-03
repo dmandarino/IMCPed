@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  IMCPed
+
+  Created by Douglas Mandarino on 4/30/15.
+  Copyright (c) 2015 Douglas Mandarino. All rights reserved.
+*/
+"title"="BMI";
+"boy"="It's a Boy!";
+"girl"="It's a Girl!";
+"2 years"="2 years";
+"3 years"="3 years";
+"4 years"="4 years";
+"5 years"="5 years";
+"6 years"="6 years";
+"7 years"="7 years";
+"8 years"="8 years";
+"9 years"="9 years";
+"10 years"="10 years";
+"11 years"="11 years";
+"12 years"="12 years";
+"13 years"="13 years";
+"14 years"="14 years";
+"15 years"="15 years";
+"BMI / Years"="BMI / Years";
+"overweight"="IMC = %@.\nIdeal weight < %@ Kg";
+"obese"="BMI = %@.\nIdeal weight < %@ Kg";
+"ideal"="BMI = %@.";
